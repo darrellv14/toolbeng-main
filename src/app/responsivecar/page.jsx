@@ -54,47 +54,50 @@ const ResponsiveCar = () => {
       </div>
       <FormCar isVisible={showFormCar} onClose={() => setShowCar(false)}>
         <form action="">
-          <div>
-            <div className="mb-2">
-              <label for="name" className="block text-sm font-medium text-white">Nama</label>
-              <input type="text" name="" id="name" onChange={(e) => setName(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-0.5" placeholder="Nama Lengkap" required/>
-            </div>
-            <div className="mb-2">
-              <label for="phone" className="block text-sm font-medium text-white">Nomor HP/Telepon</label>
-              <input type="text" name="" id="phone" onChange={(e) => setPhone(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-0.5" placeholder="Nomor HP/Telepon" required/>
-            </div>
-            <div className="mb-2">
-              <label for="address" className="block text-sm font-medium text-white">Alamat Jemput</label>
-              <input type="text" name="" id="address" onChange={(e) => setLocation(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-0.5" placeholder="Alamat Jemput" required/>
-            </div>
-            <div className="mb-2">
-              <label for="type" className="block text-sm font-medium text-white">Tipe Mobil</label>
-              <input type="text" name="" id="type" onChange={(e) => setTipe(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-0.5" placeholder="Tipe Mobil" required/>
-            </div>
-            <div className="mb-2">
-              <label for="plate" className="block text-sm font-medium text-white">Nomor Polisi</label>
-              <input type="text" name="" id="plate" onChange={(e) => setNomor(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-0.5" placeholder="Nomor Polisi" required/>
-            </div>
-            <div className="mb-2">
-              <label for="condition" className="block text-sm font-medium text-white">Kondisi Mobil</label>
-              <input type="text" name="" id="condition" onChange={(e) => setKondisi(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-0.5" placeholder="Kondisi Mobil" required/>
-            </div>
-            <div className="mb-2">
-              <label for="desc" className="block text-sm font-medium text-white">Keterangan Tambahan</label>
-              <textarea type="text" name="" id="desc" onChange={(e) => setKeterangan(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-24 px-2 py-0.5" placeholder="Keterangan Tambahan" required/>
-            </div>
-            <div className="">
-              <label className="block text-sm font-medium text-white">Ban Bocor</label>
-              <div className="flex items-center">
-                <input type="radio" onChange={(e) => setBan(true)} name="checkbox" id="Ya" />
-                <label for="Ya" className="pr-5">Ya</label>
-                <input type="radio" onChange={(e) => setBan(false)} name="checkbox" id="Tidak" />
-                <label for="Tidak">Tidak</label>
+          <div className="md:flex md:flex-row">
+            <div className="md:w-1/2 md:pl-10 md:mr-10">
+              <div className="mb-2">
+                <label for="name" className="block text-sm font-medium text-white">Nama</label>
+                <input type="text" name="" id="name" onChange={(e) => setName(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-0.5" placeholder="Nama Lengkap" required/>
+              </div>
+              <div className="mb-2">
+                <label for="phone" className="block text-sm font-medium text-white">Nomor HP/Telepon</label>
+                <input type="text" name="" id="phone" onChange={(e) => setPhone(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-0.5" placeholder="Nomor HP/Telepon" required/>
+              </div>
+              <div className="mb-2">
+                <label for="address" className="block text-sm font-medium text-white">Alamat Jemput</label>
+                <input type="text" name="" id="address" onChange={(e) => setLocation(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-0.5" placeholder="Alamat Jemput" required/>
+              </div>
+              <div className="mb-2">
+                <label for="type" className="block text-sm font-medium text-white">Tipe Mobil</label>
+                <input type="text" name="" id="type" onChange={(e) => setTipe(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-0.5" placeholder="Tipe Mobil" required/>
+              </div>
+              <div className="mb-2">
+                <label for="plate" className="block text-sm font-medium text-white">Nomor Polisi</label>
+                <input type="text" name="" id="plate" onChange={(e) => setNomor(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-0.5" placeholder="Nomor Polisi" required/>
+              </div>
+              <div className="mb-2">
+                <label for="condition" className="block text-sm font-medium text-white">Kondisi Mobil</label>
+                <input type="text" name="" id="condition" onChange={(e) => setKondisi(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 py-0.5" placeholder="Kondisi Mobil" required/>
+              </div>
+              <div className="mb-2">
+                <label for="desc" className="block text-sm font-medium text-white">Keterangan Tambahan</label>
+                <textarea type="text" name="" id="desc" onChange={(e) => setKeterangan(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-24 px-2 py-0.5" placeholder="Keterangan Tambahan" required/>
+              </div>
+              <div className="">
+                <label className="block text-sm font-medium text-white">Ban Bocor</label>
+                <div className="flex items-center">
+                  <input type="radio" onChange={(e) => setBan(true)} name="checkbox" id="Ya" />
+                  <label for="Ya" className="pr-5">Ya</label>
+                  <input type="radio" onChange={(e) => setBan(false)} name="checkbox" id="Tidak" />
+                  <label for="Tidak">Tidak</label>
+                </div>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center mt-2">
+            <div className="flex flex-col items-center justify-center mt-2 md:w-1/2">
               <Image
                   src={pana}
+                  className="object-contain w-56"
               />
               <button 
                 className={`${styles.button} bg-[#AD4043] px-4 py-2 rounded-lg mb-2 mt-2 shadow-inner drop-shadow-lg`}
