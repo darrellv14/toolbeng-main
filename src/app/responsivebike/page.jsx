@@ -82,7 +82,7 @@ const ResponsiveBike = () => {
               </div>
               <div className="mb-2">
                 <label for="desc" className="block text-sm font-medium text-white">Keterangan Tambahan</label>
-                <textarea type="text" name="" id="desc" onChange={(e) => setKeterangan(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-24 px-2 py-0.5" placeholder="Keterangan Tambahan" required/>
+                <textarea type="text" name="" id="desc" onChange={(e) => setKeterangan(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-20 px-2 py-0.5" placeholder="Keterangan Tambahan" required/>
               </div>
               <div className="">
                 <label className="block text-sm font-medium text-white">Ban Bocor</label>
@@ -97,7 +97,7 @@ const ResponsiveBike = () => {
             <div className="flex flex-col items-center justify-center mt-2 md:w-1/2">
               <Image
                   src={pana}
-                  className="object-contain w-56"
+                  className="object-contain md:w-56"
               />
               <button 
                 className={`${styles.button} bg-[#AD4043] px-4 py-2 rounded-lg mb-2 mt-2 shadow-inner drop-shadow-lg`}

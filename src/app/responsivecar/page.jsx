@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react';
 import styles from "./responsivecar.module.css";
 import Car from "public/darrell/car.svg";
 import Image from "next/image";
@@ -20,6 +20,20 @@ const ResponsiveCar = () => {
   const [kondisi, setKondisi] = useState();
   const [keterangan, setKeterangan] = useState();
   const [ban_bocor, setBan] = useState(false);
+
+  const [currLocationJs, setCurrLocationJs] = useState({});
+  useEffect(() => {
+    getLocationJs();
+  }, []);
+
+  const getLocationJs = () => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      console.log(position);
+      const { latitude, longitude } = position.coords;
+      setCurrLocationJs({ latitude, longitude });
+    })
+  }
+
   return (
     <div className="px-5 md:px-12 pt-6">
       <div className="flex flex-col">
@@ -82,7 +96,7 @@ const ResponsiveCar = () => {
               </div>
               <div className="mb-2">
                 <label for="desc" className="block text-sm font-medium text-white">Keterangan Tambahan</label>
-                <textarea type="text" name="" id="desc" onChange={(e) => setKeterangan(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-24 px-2 py-0.5" placeholder="Keterangan Tambahan" required/>
+                <textarea type="text" name="" id="desc" onChange={(e) => setKeterangan(e.target.value)} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full h-20 px-2 py-0.5" placeholder="Keterangan Tambahan" required/>
               </div>
               <div className="">
                 <label className="block text-sm font-medium text-white">Ban Bocor</label>
@@ -97,7 +111,7 @@ const ResponsiveCar = () => {
             <div className="flex flex-col items-center justify-center mt-2 md:w-1/2">
               <Image
                   src={pana}
-                  className="object-contain w-56"
+                  className="object-contain md:w-56"
               />
               <button 
                 className={`${styles.button} bg-[#AD4043] px-4 py-2 rounded-lg mb-2 mt-2 shadow-inner drop-shadow-lg`}
@@ -107,8 +121,8 @@ const ResponsiveCar = () => {
                     user_id: 2,
                     bengkel_id: 6,
                     location: location,
-                    customer_latitude: -6.3940,
-                    customer_longitude: 106.6225,
+                    customer_latitude: currLocationJs.latitude,
+                    customer_longitude: currLocationJs.longitude,
                     category: 0,
                     tipe_kendaraan: tipe_kendaraan,
                     nomor_polisi: nomor_polisi,

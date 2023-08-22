@@ -1,6 +1,7 @@
 import './global.css'
 import ResponsiveHeader from "@/components/responsiveHeader/ResponsiveHeader"
 import Background from "@/components/background/Background"
+import Footer from "@/components/footer/Footer"
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,7 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <div className="container">
           {<ResponsiveHeader/>}
-          {<Background/>}
+          {/* {<Background/>} */}
           <div className="absolute top-0 right-0 left-0 bottom-0 z-50 pt-14 h-[100vh] overflow-y-scroll overflow-x-hidden">
             {children}
           </div>
